@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;400;500;600;700;800;900&family=Roboto:wght@300;500&display=swap");
+.font-ta {
+  font-family: "Mukta Malar", sans-serif;
+}
+
+.tamil-color {
+  transition: 500ms;
+  animation: color-change 10s infinite;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -10,8 +19,33 @@ a {
   text-decoration: none;
 }
 
-.font-ta {
-  font-family: "Mukta Malar", sans-serif;
+@keyframes color-change {
+  0% {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: rgb(17, 219, 44);
+  }
+}
+.btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  line-height: 1px;
+  font-size: 0.9rem;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+.btn-primary {
+  background-color: #3f43fd;
+  color: #fff;
+}
+.btn:hover {
+  background-color: #3135e8;
 }
 
 .header {
@@ -26,13 +60,18 @@ a {
   list-style: none;
   text-transform: uppercase;
 }
-.header--menu__item {
+.header--menu__item > a {
   margin-right: 1.5rem;
   font-size: 14px;
   font-weight: 600;
-}
-.header--menu__item a {
   color: #242424;
+  transition: 200ms;
+}
+.header--menu__item > a:hover {
+  color: #3f43fd;
+}
+.header--menu__item > a.active {
+  color: #3f43fd;
 }
 
 /*# sourceMappingURL=main.css.map */
